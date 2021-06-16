@@ -1,0 +1,287 @@
+﻿
+#divMainContent{
+    display: flex;
+}
+#filtro {
+    width: 230px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    padding-top: 0px;
+}
+#filtro h1 {
+    color: #23395d;
+    font-size: 28px;
+}
+
+#filterByContent, #filterByCategories, #filterByCondition, #filterByLocation {
+    height: 90px;
+    display: block;
+    justify-content: space-between;
+}
+#filterByContent label, #filterByCategories label, #filterByCondition label, #filterByLocation label {
+    font-weight: 500;
+    display: block;
+    font-size: 20px;
+}
+#filterByContent span, #filterByCategories span, #filterByCondition span, #filterByLocation span {
+    font-weight: 500;
+    font-size: 25px;
+}
+#filterBySelect, #categorySelect, #contitionSelect, #locationSelect {
+    height: 35px;
+    width: 100%;
+    font-size: 16px;
+}
+#filterByContent span {
+    color: indianred;
+}
+#filterByCategories span {
+    color: darkkhaki;
+}
+#filterByCondition span{
+    color:darkseagreen;
+}
+#filterByLocation span{
+    color: steelblue;
+}
+
+
+
+#filterByPrice {
+    height: 180px;
+}
+#filterByPriceMinimum, #filterByMaximmum {
+    height: 90px;
+    display: block;
+    justify-content: space-between;
+}
+#filterByPriceMinimum label, #filterByPriceMaximum label{
+    font-weight: 500;
+    display:block; 
+    font-size: 20px;
+}
+#priceMinimumText, #priceMaximumText {
+    height: 35px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 5px;
+    font-size: 16px;
+}
+#filterByPriceMinimum span {
+    font-weight: 500;
+    font-size: 25px;
+    color: goldenrod;
+}
+#filterByPriceMaximum span {
+    font-weight: 500;
+    font-size: 25px;
+    color: darkseagreen;
+}
+#GoButton {
+    height: 35px;
+    width: 100%;
+    border: none;
+    background-color: #23395d;
+    color: white;
+    font-size: 20px;
+}
+#GoButton:hover{
+    cursor:pointer;
+    background-color: darkgoldenrod;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#resultados {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "articulo1 articulo2 articulo3 articulo4 articulo5" "articulo7 articulo8 articulo9 articulo10 articulo11" "articulo13 articulo14 articulo15 articulo16 articulo17" "articulo19 articulo20 articulo21 articulo22 articulo23 articulo24" "articulo25 articulo26 articulo27 articulo28 articulo29 articulo30";
+    margin-bottom: 20px;
+}
+
+    #resultados img {
+        border: 1px solid gainsboro;
+        margin-bottom: -34px;
+        width: 12vw; /* width of container */
+        height: 12vw; /* height of container */
+        object-fit: cover;
+        margin-top: -2px;
+        margin-bottom: -30px;
+    }
+
+.articulos {
+    padding: 10px 3px;
+    padding-bottom: 15px;
+    /*border-radius: 10px;*/
+    width: 100%;
+    display: grid;
+    background-color: white;
+    box-sizing: border-box;
+    padding-bottom: 0px;
+    border: 1px solid gainsboro;
+}
+
+    .articulos:hover {
+        box-shadow: 0px 2px 5px #23395d;
+    }
+
+.botonesAgregar:hover {
+    cursor: pointer;
+}
+
+#articulo1 input, #articulo1 input, #articulo2 input, #articulo3 input, #articulo4 input, #articulo5 input, #articulo6 input, #articulo7 input, #articulo8 input, #articulo9 input, #articulo10 input, #articulo11 input, #articulo12 input, #articulo13 input, #articulo14 input, #articulo15 input, #articulo16 input, #articulo8 input, main img, h3, h4, main a, h5 {
+    margin: auto;
+}
+
+#mainContent a {
+    color: #0067c2;
+    text-decoration: none;
+    /*color: #23395d;*/
+    color: darkblue;
+
+}
+
+    #mainContent a:hover {
+        text-decoration-line: underline;
+    }
+
+#mainContent h3 {
+    margin-top: 35px;
+    text-align: center;
+    font-family: Oswald;
+    font-size: 23px;
+}
+
+#mainContent h4 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: dimgray;
+    font-family: Concert One;
+}
+
+#mainContent h5 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: Oswald;
+    font-size: 19px;
+}
+#mainContent .detalles .icon-bag {
+    text-decoration: none;
+    color: seagreen;
+    font-weight: 900;
+}
+#mainContent .detalles .icon-bag:hover{
+    cursor:pointer;
+}
+
+
+.nuevo {
+    width: 12vw;
+    margin: auto;
+    background-color: darkseagreen;
+    background-color: rgba(143, 188, 143, 0.5);
+    color: white;
+    height: 26px;
+    border: none;
+    border-radius: 0px;
+    font-size: 20px;
+    /*transform: translateY(-34px);*/
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateY(-4px);
+    transform: translateX(10.5px);
+}
+
+.usado {
+    width: 12vw;
+    margin: auto;
+    background-color: rgba(246, 234, 162, 0.5);
+    color: white;
+    height: 26px;
+    border: none;
+    border-radius: 0px;
+    font-size: 20px;
+    /*transform: translateY(-34px);*/
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateY(-4px);
+    transform: translateX(10.5px);
+}
+
+.detalles {
+    display: grid;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+#mainContent {
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+}
+
+
+
+
+
+.pagination {
+    margin-top: 100px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+    .pagination a {
+        margin: 10px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        color: black;
+        line-height: 100%;
+        padding: 5px 0px;
+        text-decoration:none;
+    }
+
+        .pagination a:hover {
+            background-color: gainsboro;
+            text-decoration: underline;
+            border-radius: 5px;
+        }
+
+    .pagination .selectedPagination {
+        background-color: #23395d;
+        color: white;
+        border-radius: 5px;
+    }
+
+        .pagination .selectedPagination:hover {
+            background-color: darkgoldenrod;
+        }

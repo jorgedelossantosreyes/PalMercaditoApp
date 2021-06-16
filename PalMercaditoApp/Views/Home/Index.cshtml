@@ -1,0 +1,392 @@
+﻿
+<head>
+    <link rel="stylesheet" href="~/Styles/fontello.css" />
+    <link rel="stylesheet" href="~/Styles/IndexStyles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <title>PalMercadito - Ingresar</title>
+</head>
+
+<div id="divMainContent" style="display:flex;">
+    <aside>
+        <div id="filtro" style=" width:230px; background-color: whitesmoke; padding: 10px; border: 1px solid gainsboro; padding-top:0px;">
+            <h1>Filtra tu busqueda</h1>
+
+            <div id="filterByContent">
+                <label for="filterBySelect" class="icon-filters"><span class="icon-filter"></span>Filtrar por:</label>
+                <select name="filterBySelect" id="filterBySelect">
+                    <option id="option1" value="reciente">Mas reciente</option>
+                    <option value="precioMenor">Precio mas bajo</option>
+                    <option value="precioMayor">Precio mas alto</option>
+                </select>
+            </div>
+
+            <div id="filterByCategories">
+                <label for="categorySelect" class="icon-filters"><span class="icon-star"></span>Categorias:</label>
+                <select name="categorySelect" id="categorySelect">
+                    <option id="option1" value="reciente">Todas</option>
+                    <option>Electronicos</option>
+                    <option>Vehiculos</option>
+                    <option>Hogar</option>
+                    <option>Moda</option>
+                    <option>Deporte</option>
+                    <option>Entretenimiento</option>
+                </select>
+            </div>
+
+            <div id="filterByCondition">
+                <label for="contitionSelect" class="icon-heartbeats"><span class="icon-heartbeat"></span>Condición:</label>
+                <select name="contitionSelect" id="contitionSelect">
+                    <option value="Cualquiera">Cualquiera</option>
+                    <option value="Nuevo">Nuevo</option>
+                    <option value="Usado">Usado</option>
+                </select>
+            </div>
+
+            <div id="filterByLocation">
+                <label for="locationSelect" class="icon-locations"><span class="icon-location"></span>Ubicación:</label>
+                <select name="locationSelect" id="locationSelect">
+                    <option value="Cualquier lugar">Cualquier Lugar</option>
+                    <option value="Santo Domingo">Santo Domingo</option>
+                    <option value="Santiago">Santiago</option>
+                    <option value="La Romana">La Romana</option>
+                </select>
+            </div>
+
+            <div id="filterByPrice">
+                <div id="filterByPriceMinimum">
+                    <label for="priceMinimumText" class="icon-filters"><span class="icon-money"></span>Precio Minimo:</label>
+                    <input type="number" id="priceMinimumText" placeholder="Ej: $ 10.00">
+                </div>
+
+                <div id="filterByPriceMaximum">
+                    <label for="priceMaximumText" class="icon-filters"><span class="icon-money"></span>Precio Maximo:</label>
+                    <input type="number" id="priceMaximumText" placeholder="Ej: $ 200.00">
+                </div>
+            </div>
+            <input type="button" value="Filtrar" id="GoButton">
+
+        </div>
+    </aside>
+    <main id="mainContent">
+        <div id="resultados">
+            <div class="articulos" id="articulo1">
+                <a href="#"><img class="cropped1" src="~/img/house.jpg"></a>
+                <div class="detalles">
+                    <div id="usado1" class="usado">Segunda mano</div>
+                    <h3><a href="#">Casa de 3 hab, 2 baños en Piantini</a></h3>
+                    <!--<h5 style="font-size: 15px;">Condicion: <span style="font-weight: 100; font-size: 15px">Nuevo</span></h5>-->
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 10,000,000</h4>
+                    <a id="btnItem1" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem1')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo2">
+                <a href="#"><img class="cropped1" src="~/img/k5.jpeg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Kia k5 2011 blanco negociable</a></h3>
+                    <!--<h5 style="font-size: 15px;">Condicion: <span style="font-weight: 100; font-size: 15px">Nuevo</span></h5>-->
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 392,000</h4>
+                    <a id="btnItem2" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem2')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo3">
+                <a href="#"><img class="cropped1" src="~/img/cel.jpeg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Iphone 6s plus 64gb condiciones</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 12,000</h4>
+                    <a id="btnItem3" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem3')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo4">
+                <a href="#"><img class="cropped1" src="~/img/civic14.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Honda Civic 2014 blanco negociable</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 572,000</h4>
+                    <a id="btnItem4" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem4')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo5">
+                <a href="#"><img class="cropped1" src="~/img/cel2.jpeg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Iphone 11 128gb blanco en caja</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem5" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem5')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo6">
+                <a href="#"><img class="cropped1" src="~/img/iphone%2011%203.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 64gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 40,000</h4>
+                    <a id="btnItem6" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem6')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo7">
+                <a href="#"><img class="cropped1" src="~/img/watch.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Apple watch serie 5 nuevo en su caja</a></h3>
+                    <!--<h5 style="font-size: 15px;">Condicion: <span style="font-weight: 100; font-size: 15px">Nuevo</span></h5>-->
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 22,000</h4>
+                    <a id="btnItem7" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem7')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo8">
+                <a href="#"><img class="cropped1" src="~/img/iphone%20usado.jpeg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Iphone 11 Pro Max 64gb casi nuevo</a></h3>
+                    <!--<h5 style="font-size: 15px;">Condicion: <span style="font-weight: 100; font-size: 15px">Nuevo</span></h5>-->
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 62,000</h4>
+                    <a id="btnItem8" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem8')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo9">
+                <a href="#"><img class="cropped1" src="~/img/macbook.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Macbook Pro 2019 en su caja</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 92,000</h4>
+                    <a id="btnItem9" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem9')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo10">
+                <a href="#"><img class="cropped1" src="~/img/iphone%2011%202.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 64gb morado nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem10" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem10')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo11">
+                <a href="#"><img class="cropped1" src="~/img/solar.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Solar de 1500mts en Haina</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 4,432,000</h4>
+                    <a id="btnItem11" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem11')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo12">
+                <a href="#"><img class="cropped1" src="img/iphone%2011%204.jpeg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Iphone 11 Pro Max blanco nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem12" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem12')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo13">
+                <a href="#"><img class="cropped1" src="img/iphone%2011%204.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem11" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem11')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo14">
+                <a href="#"><img class="cropped1" src="img/iphone%2011%203.jpeg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem11" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem11')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo15">
+                <a href="#"><img class="cropped1" src="img/iphone%2011%202.jpeg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem15" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem15')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo16">
+                <a href="#"><img class="cropped1" src="img/iphone11.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem16" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem16')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo17">
+                <a href="#"><img class="cropped1" src="img/iphone11.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem17" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem17')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo18">
+                <a href="#"><img class="cropped1" src="img/iphone11.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem18" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem18')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo19">
+                <a href="#"><img class="cropped1" src="img/iphone11.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem19" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem19')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo20">
+                <a href="#"><img class="cropped1" src="img/iphone11.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem20" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem20')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo21">
+                <a href="#"><img class="cropped1" src="img/house.jpg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem21" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem21')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo22">
+                <a href="#"><img class="cropped1" src="img/honda2.jpg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem22" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem22')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo23">
+                <a href="#"><img class="cropped1" src="img/house.jpg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem23" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem23')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo24">
+                <a href="#"><img class="cropped1" src="img/honda2.jpg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem24" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem24')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo25">
+                <a href="#"><img class="cropped1" src="img/house.jpg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem25" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem25')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo26">
+                <a href="#"><img class="cropped1" src="img/iphone%2011%203.jpeg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem26" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem26')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo27">
+                <a href="#"><img class="cropped1" src="img/iphone%2011%202.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Nuevo</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem27" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem27')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo28">
+                <a href="#"><img class="cropped1" src="img/iphone11.jpeg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem28" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem28')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo29">
+                <a href="#"><img class="cropped1" src="img/iphone11.jpeg"></a>
+                <div class="detalles">
+                    <div class="nuevo">Segunda mano</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem29" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem29')">Agregar a lista</a>
+                </div>
+            </div>
+            <div class="articulos" id="articulo30">
+                <a href="#"><img class="cropped1" src="img/iphone%2011%202.jpeg"></a>
+                <div class="detalles">
+                    <div class="usado">Segunda mano</div>
+                    <h3><a href="#">Iphone 11 128gb negro nuevo</a></h3>
+                    <h5 style="font-size: 15px;">Publicado el: <span style="font-weight: 100; font-size: 15px">20/08/2020</span></h5>
+                    <h4>RD$ 32,000</h4>
+                    <a id="btnItem30" class="icon-bag" value="Agregar a lista" style="font-size: 19px;" onclick="AddToBag('btnItem30')">Agregar a lista</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a id="numero1" href="#!" class="selectedPagination" onclick="ChangePaginationSelector('numero1')">1</a>
+    <a id="numero2" href="#!" class="" onclick="ChangePaginationSelector('numero2')">2</a>
+    <a id="numero3" href="#!" class="" onclick="ChangePaginationSelector('numero3')">3</a>
+    <a id="numero4" href="#!" class="" onclick="ChangePaginationSelector('numero4')">4</a>
+    <a id="numero5" href="#!" class="" onclick="ChangePaginationSelector('numero5')">5</a>
+    <a id="numero6" href="#!" class="" onclick="ChangePaginationSelector('numero6')">6</a>
+    <a id="numero7" href="#!" class="" onclick="ChangePaginationSelector('numero7')">7</a>
+    <a id="numero8" href="#!" class="" onclick="ChangePaginationSelector('numero8')">8</a>
+    <a id="numero9" href="#!" class="" onclick="ChangePaginationSelector('numero9')">9</a>
+    <a href="#">&raquo;</a>
+</div>

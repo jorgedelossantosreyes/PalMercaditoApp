@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNet.Identity
+<link rel="stylesheet" href="~/Styles/StylesLoginPartial.css" />
+<link rel="stylesheet" href="~/Styles/fontello.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+@{
+    Layout = null;
+}
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul style="display:flex;width:180px; list-style:none;justify-content:space-between; padding-left:10px; height:60px; margin:0px; align-items:center;">
+            <li style="margin:0px;">
+                <a class="icon-user-circle-o" style="font-size:40px; color: dimgray; margin-right:-10px;"></a>
+            </li>
+            <li>
+                @Html.ActionLink("Mi Cuenta", "Index", "Manage", routeValues: null, htmlAttributes: new {title = "Manage", id = "userWelcome" })
+            </li>
+            <li style="margin-left:10px;"><a href="javascript:document.getElementById('logoutForm').submit()" id="btnSalir">Salir</a></li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="login_navbar" style="display:flex;width:165px; justify-content:flex-end; list-style:none; padding-left: 10px;">
+        <li>@Html.ActionLink("Resgistrarse", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li style="margin-left:auto;">@Html.ActionLink("Ingresar", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

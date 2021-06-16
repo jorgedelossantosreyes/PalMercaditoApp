@@ -1,0 +1,104 @@
+﻿
+
+#loginForm {
+    margin: auto;
+    width: 50%;
+    padding: 30px 0px;
+    background-color: white;
+    border: 2px solid gainsboro;
+    margin: 0px;
+    border-radius:0px;
+    padding-top:50px;
+}
+
+
+
+.form-horizontal {
+    width: 80%;
+    margin: 0px;
+    padding: 0px;
+    margin:auto;
+}
+#passwordTextbox, #emailTextbox {
+    width: 100%;
+    box-sizing: border-box;
+    height: 35px;
+    display:block;
+    font-size: 18px;
+    padding: 0px 5px;
+}
+#emailContent, #passwordContent, #RegisterContent, #rememberContent, #LoginButtonContent {
+    width: 100%;
+}
+.text-danger{
+    color:red;
+}
+.registerButton {
+    font-size: 19px;
+    color: #23395d;
+}
+.registerButton:hover{
+    color: darkgoldenrod;
+}
+
+#loginButtonLogin {
+    box-sizing: border-box;
+    width: 100%;
+    height: 35px;
+    font-size: 18px;
+    background-color: #23395d;
+    color: white;
+    border: none;
+    margin: 10px 0px;
+}
+#loginButtonLogin:hover{
+    background-color:darkgoldenrod;
+    cursor: pointer;
+}
+
+.icon-user-circle-o {
+    font-size: 150px;
+    color: dimgray;
+
+}
+#userLogoContainer{
+    display:grid;
+    justify-content:center;
+}
+
+
+
+
+
+
+
+
+#loginForm h1, #loginForm h4 {
+    margin: 0px;
+    text-align:center;
+}
+#loginForm h1 {
+    color: #23395d;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+
+
+#labelEmail, #labelPassword, #labelRemember {
+    font-size: 18px;
+}
+
+
+
+
+
+
+#mainContainer {
+    width: 100%;
+    background-color: rgba(183, 134, 11, 0.20);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}

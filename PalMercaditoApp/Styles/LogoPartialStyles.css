@@ -1,0 +1,23 @@
+﻿.logo {
+    text-decoration: none;
+    color: white;
+    color: #23395d;
+    font-family: Bebas Neue;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+    .logo h1 span {
+        color: darkgoldenrod;
+        font-size: 70px;
+    }
+
+#logoContainer {
+    grid-area: logo;
+    align-self: center;
+    min-width: 280px;
+}
+
+#NetworkingContainer {
+    margin-top: 100px;
+}

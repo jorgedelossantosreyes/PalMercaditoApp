@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalMercadito - Compra y Vende tus articulos</title>
+    <link rel="stylesheet" href="~/Styles/LayoutStyles.css" />
+    <link rel="stylesheet" href="~/Styles/fontello.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+</head>
+<body>
+    <header class="header">
+        <div id="headerContainer">
+            <div id="logoContainer">
+                <a href="/home/index" class="logo"><h1 class="icon-basket-1"><span style="font-size: 40px; width:50px;">pal'</span>mercadito</h1></a>
+            </div>
+            <div id="searchBarContainer">
+                <input type="text" id="searchBar" placeholder="Buscar">
+                <button class="icon-search"></button>
+            </div>
+            <div id="bagContainer">
+                <button id="mainMail" href="#" class="icon-mail-6"><span style="color: white; font-size: 16px; margin-left: -15px; position: absolute; transform: translateY(-9px); background-color: darkgoldenrod; border-radius: 50px; width: 23px; height: 23px;"><span style="display: grid; align-content: center; transform: translateY(3px); font-size: 15px;">0</span></span></button>
+                <button id="mainBag" href="#" class="icon-basket-1"><span style="color: white; font-size: 16px; margin-left: -15px; position: absolute; transform: translateY(-9px); background-color: darkgoldenrod; border-radius: 50px; width: 23px; height: 23px;"><span style="display: grid; align-content: center; transform: translateY(3px); font-size: 15px;" id="valorBag">0</span></span></button>
+                <!--<input id="registro" value="Regístrate" readonly="readonly">
+            <input id="loginButton" value="Ingresar" readonly="readonly" onclick="ShowLoginPopup()">-->
+                @Html.Partial("_LoginPartial")
+            </div>
+            <div id="loginPopup">
+                <form id="loginForm">
+                    <img id="loginIMG" src="img/user%20icon.png">
+                    <input id="usernameText" type="text" placeholder="Usuario">
+                    <input id="passwordText" type="password" placeholder="Contraseña">
+                    <a id="forgotPasswordLink" href="#">Olvidaste la contraseña?</a>
+                    <input id="loginButton" type="button" value="Entrar">
+                </form>
+            </div>
+        </div>
+        <!--<div id="headerBottom">
+        <div id="categoriesContainer">
+            <ul id="listOfCategories">
+                <li><a href="#">Todas</a></li>
+                <li><a href="#"><span class="icon-mobile"></span> Electronicos</a></li>
+                <li><a href="#"><span class="icon-cab"></span> Vehiculos</a></li>
+                <li><a href="#"><span class="icon-home"></span> Hogar</a></li>
+                <li><a href="#"><span class="icon-t-shirt"></span> Moda</a></li>
+                <li><a href="#"><span class="icon-basketball"></span> Deporte y Entretenimiento</a></li>
+                <li><a href="#"><span class="icon-food"></span> Comida</a></li>
+                <li><a href="#"><span class="icon-dot-3"></span></a></li>
+            </ul>
+        </div>
+    </div>-->
+    </header>
+    <div class="body-main">
+        @RenderBody()
+    </div>
+    <footer>
+        <div id="footerContainer">
+            <div id="contactContainer" class="elementosFooter">
+                <h3>Contactanos</h3><br>
+                <a href="tel:8292222222"><span class="icon-phone"></span>809-222-2222</a><br><br>
+                <a href="mailto:jorge20080@hotmail.com"><span class="icon-envelope-open"></span> Envianos un correo</a><br>
+            </div>
+            <div id="supportContainer" class="elementosFooter">
+                <h3>Ayuda</h3><br>
+                <a href="#"><span class="icon-help-circled"></span>Preguntas Frecuentes</a><br><br>
+                <a href="#"><span class="icon-book"></span>Tutoriales</a><br>
+            </div>
+            <div id="NetworkingContainer" class="elementosFooter">
+                <h3>Redes</h3><br>
+                <a href="#"><span class="icon-twitter"></span>Twitter</a><br><br>
+                <a href="#"><span class="icon-facebook"></span>Facebook</a><br><br>
+                <a href="#"><span class="icon-instagram"></span>Instagram</a>
+            </div>
+            <div id="AcercaDeContainer" class="elementosFooter">
+                <h3>Acerca de nosotros</h3><br>
+                <a href="#"><span class="icon-info-circled"></span>Quienes somos?</a><br><br>
+                <a href="#"><span class="icon-doc"></span>Terminos y Condiciones</a><br>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

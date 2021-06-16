@@ -1,0 +1,300 @@
+﻿body {
+    margin: 0px;
+    font-family: 'Roboto', serif;
+    padding: 0px;
+    position:absolute;
+    width:100%;
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    border-bottom: 1px solid #23395d;
+    box-shadow: 0px 4px 5px gray;
+}
+
+#headerContainer {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "logo searchbar searchbar searchbar searchbar bag";
+    z-index: 110;
+    background-color: transparent;
+    align-content: center;
+    height: 60px;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    text-decoration-color: black;
+    color: #23395d;
+    font-family: Bebas Neue;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.logo h1 span {
+    color: darkgoldenrod;
+    font-size: 35px;
+}
+
+#searchBarContainer {
+    grid-area: searchbar;
+    align-self: center;
+}
+
+#logoContainer {
+    grid-area: logo;
+    align-self: center;
+    min-width: 280px;
+}
+
+#bagContainer {
+    grid-area: bag;
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#searchBar {
+    width: 80%;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-right: -4px;
+    font-size: 20px;
+    color: grey;
+    padding-left: 15px;
+    /*border-radius: 5px 0px 0px 5px;*/
+    border-radius: 100px;
+    border: 0.1px solid gray;
+}
+
+#searchBar:focus {
+    outline: none;
+    box-shadow: 0 0 1pt 1pt blue;
+}
+
+.icon-search {
+    height: 40px;
+    width: 40px;
+    font-size: 19px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 20px;
+    transform: translate(-40px);
+    border: 1px solid darkslategray;
+    background-color: darkgoldenrod;
+    color: white;
+    font-family: 'Roboto', serif;
+    padding: 0;
+    background-color: white;
+    color:white;
+    background-color: #23395d;
+
+}
+
+.icon-search:focus {
+    outline: none;
+    box-shadow: 0 0 1pt 1pt white;
+}
+
+.icon-search:hover {
+    background-color: darkgoldenrod;
+    cursor: pointer;
+}
+
+
+header #mainBag:hover, header #mainMail:hover {
+    text-shadow: 0px 0px 1px #23395d;
+    cursor: pointer;
+}
+
+header #mainBag:focus,
+header #mainMail:focus {
+    outline: none;
+}
+
+
+#mainMail {
+    font-size: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    color: #23395d;
+}
+#mainBag {
+    font-size: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    color: #23395d;
+}
+
+
+#registro:hover, #loginButton:hover {
+    border-color: darkgoldenrod;
+    color: darkgoldenrod;
+}
+
+#headerBottom {
+    /*position: absolute;*/
+    width: 100%;
+    /*background-color: darkslategray;*/
+    height: 40px;
+    /*box-shadow: 0px 4px 5px darkgoldenrod;*/
+    display: grid;
+    align-content: center;
+    background-color: white;
+    box-shadow: 0px 4px 5px gray;
+    background-color: #23395d;
+    box-shadow: none;
+}
+
+#listOfCategories {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+#listOfCategories li {
+    list-style: none;
+}
+
+#listOfCategories li a {
+    text-decoration: none;    
+    font-size: 16px;
+    color: #23395d;
+    color: white;
+    font-size: 19px;
+}
+
+li span {
+    font-size: 20px;
+}
+
+#listOfCategories li a:hover {
+    text-shadow: 0px 0px 5px gainsboro;
+}
+
+#loginPopup {
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    transform: translateY(60px);
+    display: none;
+}
+
+#loginForm {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 230px;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#loginPopup input {
+    display: block;
+    height: 40px;
+    margin-top: 10px;
+    width: 90%;
+    border-radius: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+}
+
+#loginPopup a {
+    margin-top: 10px;
+    font-size: 15px;
+    color: darkgoldenrod;
+}
+
+#loginPopup input[type="button"] {
+    margin-bottom: 20px;
+    background-color: #23395d;
+    color: white;
+    font-size: 17px;
+}
+
+#loginPopup input[type="button"]:hover {
+    cursor: pointer;
+}
+
+#loginPopup img {
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+#loginPopup input:focus {
+    outline: none;
+    border-width: 2px;
+    border-color: #23395d;
+}
+
+
+
+
+
+
+
+
+
+footer {
+    padding-top: 20px;
+    height: 180px;
+    background-color: whitesmoke;
+    width:100%;
+    border-top: 1px solid gainsboro;
+}
+
+#footerContainer {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+#footerContainer h3 {
+    color: dimgray;
+    text-align: start;
+    font-size: 22px;
+    margin:0px;
+    margin-bottom:15px;
+}
+
+#footerContainer a {
+    color: #23395d;
+    font-size: 19px;
+    text-decoration: none;
+}
+#footerContainer a:hover{
+    color: darkgoldenrod;
+}
+#footerContainer span {
+    color: darkgoldenrod;
+    font-size: 18px;
+}
+
+
+.body-main{
+    margin: auto;
+    margin-top: 100px;
+    width:95%;
+}

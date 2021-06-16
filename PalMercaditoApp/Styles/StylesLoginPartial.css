@@ -1,0 +1,47 @@
+﻿body {
+
+}
+#userWelcome {
+    color: #23395d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: Oswald;
+}
+#btnSalir {
+    color: #23395d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: Oswald;
+}
+#userWelcome:hover, #btnSalir:hover{
+    color: darkgoldenrod;
+}
+
+#registerLink {
+    color: #23395d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: Oswald;
+}
+#loginLink {
+    color: #23395d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: Oswald;
+}
+#registerLink:hover, #loginLink:hover {
+    color: darkgoldenrod;
+}
+
+/*.login_navbar li {
+    height: 30px;
+    border: 2px solid #23395d;
+    border-radius: 50px;
+    padding: 0px 5px;
+}*/
+
+

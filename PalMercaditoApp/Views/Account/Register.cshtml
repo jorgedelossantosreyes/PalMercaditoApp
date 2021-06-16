@@ -1,0 +1,45 @@
+﻿@model PalMercaditoApp.Models.RegisterViewModel
+<head>
+    <link rel="stylesheet" href="~/Styles/fontello.css" />
+    <link rel="stylesheet" href="~/Styles/RegisterStyles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas Neue">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <title>PalMercadito - Regístrate</title>
+</head>
+
+@{
+    Layout = null;
+}
+
+<div id="mainContainer">
+    @Html.Partial("_PartialLogoForRegistrationAndLogin")
+    <div id="registerForm">
+        <h1>Regístrate</h1>
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+            <div id="emailContent">
+                @Html.LabelFor(m => m.Email, "Email", htmlAttributes: new { id = "labelEmail" })
+                @Html.TextBoxFor(m => m.Email, new { id = "emailTextbox" })
+            </div>
+            <br />
+            <div id="passwordContent">
+                @Html.LabelFor(m => m.Password, "Contraseña", htmlAttributes: new { id = "labelPassword" })
+                @Html.PasswordFor(m => m.Password, new { id = "passwordTextbox" })
+            </div>
+            <br />
+            <div id="confirmPasswordContent">
+                @Html.LabelFor(m => m.ConfirmPassword, "Confirmar Contraseña", htmlAttributes: new { id = "labelConfirmPassword" })
+                @Html.PasswordFor(m => m.ConfirmPassword, new { id = "confirmPasswordTextbox" })
+            </div>
+            <br />
+            <div id="registerButtonContent">
+                <input type="submit" id="registerButtonRegister" value="Completar Registro" />
+            </div>
+        }
+    </div>
+</div>
+
+
